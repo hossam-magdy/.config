@@ -1,4 +1,5 @@
 .dotfiles.git/
+.git-credentials
 
 .bash_history
 

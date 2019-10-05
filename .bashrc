@@ -122,5 +122,4 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 export PATH=$PATH:~/.cargo/bin
 
-alias dotfiles="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
-
+alias config="git --git-dir=$HOME/.config.git/ --work-tree=$HOME"

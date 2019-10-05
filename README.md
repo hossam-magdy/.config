@@ -1,21 +1,34 @@
-# dotfiles
+# config (dotfiles)
+
+This is a [bare](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) git repository for managing [dotfiles](https://wiki.archlinux.org/index.php/Dotfiles)/config in `$HOME` directory.
 
 ## Install
 ```
 export RCFILE=$(ls $HOME/.{zsh,bash}rc -a | head -1)
-echo 'alias dotfiles="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"' >> $RCFILE
+echo 'alias config="git --git-dir=$HOME/.config.git/ --work-tree=$HOME"' >> $RCFILE
 source $RCFILE
-git clone --bare https://github.com/hossam-magdy/.dotfiles $HOME/.dotfiles.git
-dotfiles config --local status.showUntrackedFiles no
-dotfiles checkout
+git clone --bare https://github.com/hossam-magdy/.config $HOME/.config.git
+config config --local status.showUntrackedFiles no
+config checkout
 ```
 
 ## Usage
 
-git command/alias: `dotfiles`
+git command/alias: `config`
 
-`dotfiles add FILE`
+```
+config add FILE
+config commit -m 'some commit message'
+config push
+```
 
-`dotfiles commit -m 'some commit message'`
+## Todo
 
-`dotfiles push`
+- Clean `.bashrc`
+- Add `macos` branch/config
+
+## Ref
+
+- [Atlassian](https://www.atlassian.com/git/tutorials/dotfiles)
+- [archlinux](https://wiki.archlinux.org/index.php/Dotfiles)
+- [dotfiles.github.io](https://dotfiles.github.io/)
