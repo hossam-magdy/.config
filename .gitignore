@@ -1,0 +1,11 @@
+.dotfiles.git/
+
+.bash_history
+
+.DS_Store
+.MacOSX
+.Trash
+
+# node_modules/
+# vendor/
+
